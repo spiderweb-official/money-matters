@@ -1,3 +1,38 @@
 spring:
   application:
     name: money-matters
+
+# ---------------------------------------------------------------------------
+# NSE (National Stock Exchange) data integration configuration
+# Bound to com.spiderweb.nse.config.NseProperties
+# ---------------------------------------------------------------------------
+nse:
+  # NSE homepage used for session cookie warm-up fallback
+  base-url: https://www.nseindia.com
+  # Direct link to daily-updated listed equities CSV
+  csv-url: https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv
+  # Browser-like User-Agent to avoid CDN blocks
+  user-agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  # Cron expression for scheduled daily cache refresh (default: every day at 07:00 AM IST)
+  refresh-cron: "0 0 7 * * *"
+
+# ---------------------------------------------------------------------------
+# Springdoc OpenAPI / Swagger UI configuration
+# ---------------------------------------------------------------------------
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: alpha
+    tags-sorter: alpha
+    default-models-expand-depth: 1
+    default-model-expand-depth: 1
+    display-request-duration: true
+    display-operation-id: true
+    supported-submit-methods:
+      - get
+      - post
+      - put
+      - patch
+      - delete

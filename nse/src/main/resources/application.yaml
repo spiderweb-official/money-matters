@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: money-matters
+
+# NSE (National Stock Exchange) data integration configuration.
+# These values are bound to com.spiderweb.nse.config.NseProperties.
+nse:
+  # NSE homepage used for the session cookie warm-up handshake.
+  base-url: https://www.nseindia.com
+  # Direct link to the daily-updated listed equities CSV.
+  csv-url: https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv
+  # Browser-like User-Agent to avoid 403 blocks from NSE's CDN (Akamai).
+  user-agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  # Cron expression for the scheduled cache refresh (default: every day at 07:00 AM).
+  refresh-cron: "0 0 7 * * *"
+
+# ---------------------------------------------------------------------------
+# Springdoc OpenAPI / Swagger UI configuration
+# ---------------------------------------------------------------------------
+springdoc:
+  # Path where the raw OpenAPI JSON spec is served.
+  api-docs:
+    path: /v3/api-docs
+
+  # Swagger UI customisation.
+  swagger-ui:
+    # URL path for the Swagger UI HTML page.
+    path: /swagger-ui.html
+    # Sort endpoints alphabetically within each tag group.
+    operations-sorter: alpha
+    # Sort tag groups (modules) alphabetically.
+    tags-sorter: alpha
+    # Expand model schemas one level deep by default in the UI.
+    default-models-expand-depth: 1
+    # Expand operation request body schemas one level deep by default.
+    default-model-expand-depth: 1
+    # Show the request duration in the Swagger UI response panel.
+    display-request-duration: true
+    # Pre-select the first API group in the UI group selector.
+    display-operation-id: true
+    # Disable the "Try it out" toggle by default (set to [] to enable all).
+    supported-submit-methods:
+      - get
+      - post
+      - put
+      - patch
+      - delete
+

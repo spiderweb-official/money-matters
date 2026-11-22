@@ -17,12 +17,14 @@
 
 	<modules>
 		<module>bse</module>
+		<module>nse</module>
 		<module>application</module>
 	</modules>
 
 	<properties>
 		<java.version>25</java.version>
 		<springdoc.version>3.2.0</springdoc.version>
+		<opencsv.version>5.9</opencsv.version>
 	</properties>
 
 	<dependencyManagement>
@@ -33,9 +35,19 @@
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>com.spiderweb</groupId>
+				<artifactId>nse</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.springdoc</groupId>
 				<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 				<version>${springdoc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.opencsv</groupId>
+				<artifactId>opencsv</artifactId>
+				<version>${opencsv.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
