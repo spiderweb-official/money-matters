@@ -37,7 +37,7 @@ nse/
 │   └── API.md                       # API documentation in Markdown
 ├── src/
 │   ├── main/
-│   │   ├── java/com/spiderweb/nse/
+│   │   ├── java/com/spiderweb/money_matters/nse/
 │   │   │   ├── client/
 │   │   │   │   └── NseHttpClient.java            # Fetches CSV directly from NSE archives
 │   │   │   ├── config/
@@ -54,7 +54,7 @@ nse/
 │   │   └── resources/
 │   │       └── application.yaml                  # Module default properties
 │   └── test/
-│       └── java/com/spiderweb/nse/
+│       └── java/com/spiderweb/money_matters/nse/
 │           └── model/
 │               └── NseLocalDateConverterTest.java# Unit tests for date parser
 └── pom.xml

@@ -1,7 +1,7 @@
 package com.spiderweb.money_matters.nse.controller;
 
-import com.spiderweb.nse.model.ListedCompany;
-import com.spiderweb.nse.service.NseListedCompaniesService;
+import com.spiderweb.money_matters.nse.model.ListedCompany;
+import com.spiderweb.money_matters.nse.service.NseListedCompaniesService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.headers.Header;
 import io.swagger.v3.oas.annotations.media.ArraySchema;

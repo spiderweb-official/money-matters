@@ -1,4 +1,4 @@
-package com.spiderweb.nse.model;
+package com.spiderweb.money_matters.nse.model;
 
 import org.junit.jupiter.api.Test;
 

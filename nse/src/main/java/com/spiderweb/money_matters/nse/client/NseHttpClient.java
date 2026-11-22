@@ -1,6 +1,6 @@
 package com.spiderweb.money_matters.nse.client;
 
-import com.spiderweb.nse.config.NseProperties;
+import com.spiderweb.money_matters.nse.config.NseProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;

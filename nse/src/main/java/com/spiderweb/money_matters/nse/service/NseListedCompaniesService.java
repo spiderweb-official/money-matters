@@ -1,8 +1,8 @@
 package com.spiderweb.money_matters.nse.service;
 
 import com.opencsv.bean.CsvToBeanBuilder;
-import com.spiderweb.nse.client.NseHttpClient;
-import com.spiderweb.nse.model.ListedCompany;
+import com.spiderweb.money_matters.nse.client.NseHttpClient;
+import com.spiderweb.money_matters.nse.model.ListedCompany;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
